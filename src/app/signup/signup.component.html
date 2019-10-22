@@ -1,0 +1,21 @@
+<div class="container" *ngIf='!checkLogin'>
+    <div class="row">
+        <div class="col-12" class="form-group"   >
+            <form (ngSubmit)="onSignUp()" [formGroup]="fromSignUp">
+                <label >UserName:</label><input class="form-control" type="text" formControlName="username" placeholder="UserName" required>
+                <label >PassWord: </label><input class="form-control" type="password" formControlName="password" placeholder="PassWord" required>
+                <p *ngIf="fromSignUp.controls.password?.errors?.minlength ">Mật Khẩu phải từ 6 kí tự trở lên và không quá 20 kí tự</p>
+                <label >Full Name: </label><input class="form-control" type="text" formControlName="fullname" placeholder="FullName" required>
+                <label >Email: </label><input class="form-control" formControlName="email" email placeholder="Email" required>
+                <label >BỉthDay</label><input class="form-control" type="date" formControlName="birthday" placeholder="BirthDay" required>
+                <label >SchllFree</label><input class="form-control" type="text" formControlName="schoolfee" placeholder="SchoolFree" required>
+                <p *ngIf="fromSignUp.touched && fromSignUp.invalid">Bạn đã bỏ trống hoặc định dạng email không hợp lệ</p>
+                <br><br>
+                <button class="btn btn-info" [disabled]="fromSignUp.invalid">Tạo Tk</button>    
+            </form>
+        </div>
+    </div>
+</div>
+<div class="cotainer" *ngIf='checkLogin'>
+    <h1>Đã đăng nhập rồi thì không được tạo tài khoản Hãy đăng xuất để tạo Tài Khoản</h1>
+</div>

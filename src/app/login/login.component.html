@@ -1,0 +1,21 @@
+<div class="container" >
+    <div class="row" *ngIf="!checkLogin" class="form-group">
+        <form (ngSubmit)="onSubmitSign()" [formGroup]="fromSignIn"> 
+            <input type="text" placeholder="UsesrName" formControlName="username" required class="form-control">
+            <p *ngIf="fromSignIn.touched && fromSignIn.controls.username?.errors?.required">Không được bỏ trống Tài Khoản</p>
+            <br><br> 
+            <input type="password" placeholder="PassWord" formControlName="password" required class="form-control">
+            <p *ngIf="fromSignIn.touched && fromSignIn.controls.password?.errors?.required">Không được bỏ trống Mật Khẩu</p>
+            <br><br>
+            <p *ngIf="thongbao">Bạn đã nhập sai tài khoản hoặc mật khẩu</p>
+            <button [disabled]="fromSignIn.invalid" class="btn btn-success">Login</button>
+        </form>
+        <br><br>
+        <P style="color: red;">Form Này bị lỗi nên hãy đăng nhập 2 lần mới hãy Enter 2 lần là vào được và chưa fix được</P>
+        <p>Miêu tả lỗi : Đăng nhập lần đầu tiên không vô được lần thứ 2 thì vô đươc</p>
+
+    </div>
+    <div class="row" *ngIf="checkLogin">
+        <h1>Bạn đã đăng nhập thành công</h1> 
+    </div>
+</div> 
