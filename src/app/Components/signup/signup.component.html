@@ -1,0 +1,25 @@
+<div class="row box" style="margin-top: 50px;" >
+        <form  (ngSubmit)="onSignUp(formSignUp);" #formSignUp="ngForm" class="form-group">
+            <h1 style="color: teal;">SIGN UP</h1>
+            <input type="text" placeholder="email"  ngModel 
+            #txtEmail="ngModel"
+            name="email" class="form-control"><br>
+
+            <input type="text" placeholder="Họ và Tên" ngModel
+            #txtName="ngModel" 
+            name="name" class="form-control"><br>
+
+            <input type="password" placeholder="password" ngModel
+            #txtPassword="ngModel"
+            name="password" class="form-control"><br>
+
+            <input type="password" placeholder="password" ngModel
+            #txtPassword2="ngModel"
+            name="password2" class="form-control"><br>
+            <p *ngIf="failSamePassword" style="color: red;">Hai Mật Khẩu Không Khớp Nhau !!!</p><br>
+
+            <input class="btn btn-primary" type="submit" value="Đăng kí">
+        
+        </form>
+        </div>
+

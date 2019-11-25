@@ -1,0 +1,15 @@
+<div class="row box" style="margin-top: 40px;" >
+        <form  (ngSubmit)="onSignIn(formSignIn);" #formSignIn="ngForm" >
+            <h1>LOGIN</h1>
+            <input type="text" placeholder="Username"  ngModel
+            #txtEmail="ngModel"
+            name="email">
+            <input type="password" placeholder="Password" ngModel
+            #txtPassword="ngModel"
+            value="sfnd"
+            name="password">
+            <a [routerLink]="['/forgotemail']" routerLinkActive="router-link-active" >ForGotPassWord ?</a><br><br>
+            <p *ngIf="loginFaild" style="color: red;">Sai Tài Khoản hoặc Mật Khẩu !!!</p>
+            <input type="submit" class="btn btn-success" value="LOGIN">
+        </form>
+</div>

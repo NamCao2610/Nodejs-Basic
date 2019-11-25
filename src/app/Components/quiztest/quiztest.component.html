@@ -1,0 +1,15 @@
+<div class="card" *ngFor='let qui of  Quizs | paginate: { itemsPerPage: 1, currentPage: numberPages }'>
+    <h5 class="card-header">{{nameSubject}}</h5>
+    <div class="card-body">
+      <h5 class="card-title">Câu <span class="badge badge-success">{{numberPages}}</span> : {{qui.Text}}</h5>
+      <p class="card-text" *ngFor="let ans of qui.Answers">
+         <label><input type="radio" (click)="sendRes(ans.Id, qui)" name="req" >{{ans.Text}}</label>
+    </p>
+    <button class="btn btn-success" (click)="periodAns()" style="margin-left: 20px;">Period</button>
+     <button class="btn btn-primary" (click)="nextAns()" style="margin-left: 20px;">Next</button>
+     <button class="btn btn-primary" (click)="sendServer()" style="margin-left: 20px;">Nộp Bài</button>
+
+    </div>
+  </div>
+
+

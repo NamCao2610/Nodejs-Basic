@@ -1,34 +1,8 @@
-
-<div class="container" >
+<div class="container">
   <div class="row">
-      <img src="assets/TaiNguyen/images/banner.png" class="img-fluid" alt="Responsive image">
+    <menu></menu>
   </div>
   <div class="row">
-      <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" [routerLink]="['/Exam']" >Exam</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" >Trang Chủ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" >Giới Thiệu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/Signin']" routerLinkActive="router-link-active" >SignIn</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" [routerLink]="['/SignUp']" routerLinkActive="router-link-active" >SignUP</a>
-            </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tài Khoản</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" [routerLink]="['/Username']" routerLinkActive="router-link-active" >Đổi MK và cập nhật TK</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" [routerLink]="['/Logout']" routerLinkActive="router-link-active" >LognOut</a>
-            </div>
-          </li>
-        </ul>
+    <router-outlet></router-outlet>
   </div>
-  <router-outlet></router-outlet>
 </div>

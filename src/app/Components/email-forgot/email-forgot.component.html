@@ -1,0 +1,11 @@
+
+<div class="row" style="margin: 0 auto;">
+    <form (ngSubmit)="onsendEmail(formsendEmail);" #formsendEmail="ngForm">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email"
+          ngModel #txtEmail="ngModel" name="email">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

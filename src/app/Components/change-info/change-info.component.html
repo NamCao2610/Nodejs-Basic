@@ -1,0 +1,21 @@
+<div class="row" style="margin: 0 auto;">
+    <form (ngSubmit)="onChangeInfo(formchInfo);" #formchInfo="ngForm">
+
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control"  placeholder="Enter email"
+          ngModel #txtEmail="ngModel" name="email">
+
+          <label for="exampleInputPassword1">New Name</label>
+            <input type="text" class="form-control"  placeholder="PassWord"
+            ngModel #txtCode="ngModel" name="name">
+
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control"  placeholder="Password"
+          ngModel #txtNewPassword="ngModel" name="password">
+
+            <p style="color: red;" *ngIf='failPass'>Mật Khẩu SAI !!!</p>
+            <br>
+        <button  class="btn btn-primary">Change Name</button>
+      </form>
+</div>
+

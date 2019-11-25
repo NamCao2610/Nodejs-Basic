@@ -1,0 +1,24 @@
+<div class="row" style="margin: 0 auto;">
+    <form (ngSubmit)="onChangePass(formchPass);" #formchPass="ngForm">
+
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control"  placeholder="Enter email"
+          ngModel #txtEmail="ngModel" name="email">
+
+          <label for="exampleInputPassword1">PassWord</label>
+            <input type="password" class="form-control"  placeholder="PassWord"
+            ngModel #txtCode="ngModel" name="password">
+
+          <label for="exampleInputPassword1">NewPassword</label>
+          <input type="password" class="form-control"  placeholder="Password"
+          ngModel #txtNewPassword="ngModel" name="newPassword">
+
+            <label for="exampleInputPassword1">Nhắc Lại Password</label>
+            <input type="password" class="form-control"  placeholder="Password"
+            ngModel #txtNewPassword2="ngModel" name="newPassword2">
+            <p style="color: red;" *ngIf='failSamePass'>Mật Khẩu Mới Không KHỚP Với Nhau !!!</p>
+            <p style="color:blue;" *ngIf='failPass'>Sai Mật Khẩu Cũ</p>
+            <br><br>
+        <button type="submit" class="btn btn-primary">Resert Password</button>
+      </form>
+</div>

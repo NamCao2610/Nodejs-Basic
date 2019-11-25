@@ -1,0 +1,26 @@
+<div class="row" style="background-color: #313131;">
+    <div class="col-12">
+        <ul>
+                <li><a [routerLink]="['/']" routerLinkActive="router-link-active" >HOME</a></li>
+                <li><a [routerLink]="['/categories']" routerLinkActive="router-link-active" >CATEGORIES</a></li>
+                <li>Contact us</li>
+                <li><a (click)="checkSignUp()" [routerLink]="['/signup']" routerLinkActive="router-link-active">SIGNUP</a></li>
+                <li><button (click)="checkLogin()">LOGIN</button></li>
+                
+                <!-- Example single danger button -->
+<div class="btn-group" style="margin: 13px;">
+    <button type="button"  class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{userName}}
+    </button>
+    <div class="dropdown-menu">
+      <button class="dropdown-item" (click)="checkRename()">Đổi Tên</button>
+      <button class="dropdown-item" (click)="checkchPass()">Đổi Mật Khẩu</button>
+      <div class="dropdown-divider"></div>
+      <button class="dropdown-item" (click)="LognOut()">LognOut</button>
+    </div>
+  </div>
+
+            </ul>
+    </div>       
+</div>
+    
